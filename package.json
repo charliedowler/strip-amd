@@ -1,0 +1,23 @@
+{
+  "name": "strip-amd",
+  "version": "0.1.0",
+  "description": "Strip an AMD wrapper from body of text\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charliedowler/strip-amd.git"
+  },
+  "keywords": [
+    "strip",
+    "amd"
+  ],
+  "author": "charliedowler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charliedowler/strip-amd/issues"
+  },
+  "homepage": "https://github.com/charliedowler/strip-amd"
+}
