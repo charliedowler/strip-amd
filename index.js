@@ -1,17 +1,16 @@
 (function() {
   var staRegex = /define\(.*?\{/;
-  var midRegex = /return.*[^return]*$/;
+  var retRegex = /return.*[^return]*$/;
+  var modRegex = /module.exports(.|)=(.|)+/;
   var endRegex = /(}\);|}\))$/;
 
   var stripper = function(contents) {
     if (staRegex.test(contents)) {
-      contents = contents.replace(staRegex, '');
-      if (midRegex.test(contents)) {
-        contents = contents.replace(midRegex, '');
-      }
-      else if (endRegex.test(contents)) {
-        contents = contents.replace(endRegex, '');
-      }
+      contents = contents.replace(staRegex, '')
+        .replace(endRegex, '');
+
+      if (retRegex) contents = contents.replace(retRegex, '');
+      if (modRegex) contents = contents.replace(modRegex, '');
     }
     return contents;
   };
