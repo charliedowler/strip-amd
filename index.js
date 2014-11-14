@@ -4,7 +4,7 @@
   var endRegex = /(}\);|}\))$/;
 
   var stripper = function(contents) {
-    if (staRegex).test(contents)) {
+    if (staRegex.test(contents)) {
 			contents = contents.replace(staRegex, '');
       if (midRegex.test(contents)) {
         contents = contents.replace(midRegex, '');
